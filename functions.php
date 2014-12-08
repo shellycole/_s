@@ -201,3 +201,8 @@ require( get_template_directory() . '/inc/redux-functions.php' );
  * Add custom shortcodes
  */
 require( get_template_directory() . '/inc/shortcodes.php' );
+
+/**
+ * if simple membership capabilities are needed, then uncomment this.
+ */
+//require( get_template_directory() . '/inc/membership.php' );

@@ -128,3 +128,51 @@ function _s_search404($search_term_q) {
 	<?php /* close the list before closing the if/else */
 	else : endif;
 }
+
+/**
+ * Add the search box to the nav menu
+ */
+function _s_add_search_box($items, $args) { 
+        ob_start();
+        get_search_form(); 
+        $searchform = ob_get_contents();
+        ob_end_clean();
+ 
+        $items .= '<li class="searchform">' . $searchform . '</li>';
+ 
+    return $items;
+}
+// add_filter('wp_nav_menu_items','_s_add_search_box', 10, 2);
+
+/**
+ * Get Media ID from the url path
+ */
+function _s_get_attachment_id_from_src($image_src) {
+    global $wpdb;
+    $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$image_src'";
+    $id = $wpdb->get_var($query);
+    return $id;
+}
+
+/**
+ * Get Page ID by slug
+ */
+function _s_get_ID_by_slug($page_slug) {
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        return $page->ID;
+    } else {
+        return null;
+    }
+}
+
+/**
+ * Custom default avatar.  Requires you to upload an image 
+ * names "custom-avatar.png" to the images directory.
+ */
+function _s_add_custom_default_gravatar( $avatar_defaults ) {
+    $myavatar = get_template_directory() . '/images/custom-avatar.png';
+    $avatar_defaults[$myavatar] = 'NAME HERE'; // name your avatar
+    return $avatar_defaults;
+}
+//add_filter( 'avatar_defaults', '_s_add_custom_default_gravatar' );

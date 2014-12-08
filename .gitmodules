@@ -1,0 +1,6 @@
+[submodule "inc/redux"]
+	path = inc/redux
+	url = https://shellycole@github.com/shellycole/redux-framework.git
+[submodule "inc/cmb2"]
+	path = inc/cmb2
+	url = https://shellycole@github.com/shellycole/CMB2.git

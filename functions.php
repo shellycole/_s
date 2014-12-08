@@ -132,6 +132,23 @@ function _s_scripts() {
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
 /**
+ * Enqueue WordPress' Dashicons for frontend use, as well as Redux's Elusive Icons,
+ * and the ever-wonderful Font Aweseome. "Cheat Sheet" links below.
+ * https://developer.wordpress.org/resource/dashicons/
+ * http://press.codes/downloads/elusive-icons-webfont/
+ * http://fontawesome.io/icons/
+ */
+function _s_icon_fonts() {
+	wp_enqueue_style( 'dashicons' );
+        //elusive icons, which are packaged with Redux
+        wp_enqueue_style( 'el-icon', get_template_directory_uri() . '/inc/redux/ReduxCore/assets/css/vendor/elusive-icons/elusive-webfont.css' );
+        //fontawesome
+        wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+}
+add_action( 'wp_enqueue_scripts', '_s_icon_fonts' );
+
+
+/**
  * Custom metaboxes for this theme.
  */
 // require get_template_directory() . '/inc/metaboxes.php';

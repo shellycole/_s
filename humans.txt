@@ -1,0 +1,24 @@
+/* TEAM */
+	Designer:   
+	URI:        
+	Email:      
+	Twitter:    
+
+	Developer:  Shelly Cole
+	URI:        http://shellycodes.com
+	Email:      hello@shellycodes.com
+	Twitter:    @shellycodes
+
+/* THANKS */
+	Base Theme: _s by Automattic
+	URI:        http://underscores.me/
+	Twitter:    @automattic
+
+        Also thanks for Sarah Lewis (WPMoxie, bookchiq) for some of the 
+        additional changes/edits to _s, which I also lifted so I didn't have to 
+        rewrite everything.
+
+/* THEME */
+        Standards: HTML5, CSS3
+        Components: WordPress, Redux Framework, CMB2
+        Software: NetBeans, Tower

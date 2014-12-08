@@ -5,6 +5,23 @@
  * @package _s
  */
 
+// Define global constants
+define( '_S_DESIGNER_TWITTER_HANDLE', 'shellycodes' );
+define( '_S_OPTIONS', '_s_' );
+define( '_S_SHORTCODE_PREFIX', '_s' );
+define( '_S_GOOGLE_API_KEY', '');
+define( '_S_METABOX_PREFIX', '_s_' );
+
+/**
+* Add humans.txt to the <head> element.
+*/
+add_action( 'wp_head', '_s_header_meta' );
+function _s_header_meta() {
+	$humans = '<link type="text/plain" rel="author" href="' . get_template_directory_uri() . '/humans.txt" />';
+
+	echo apply_filters( '_s_humans', $humans );
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -90,8 +107,8 @@ function _s_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', '_s_widgets_init' );
@@ -113,6 +130,11 @@ function _s_scripts() {
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
 /**
+ * Custom metaboxes for this theme.
+ */
+// require get_template_directory() . '/inc/metaboxes.php';
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
@@ -128,11 +150,35 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Custom widgets for this theme.
+ */
+require get_template_directory() . '/inc/widgets.php';
+
+/**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+//require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Theme options
+ */
+// Only load the class here if it's not included as a plugin
+if ( ! class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/inc/redux/ReduxCore/framework.php' ) ) {
+	require_once( dirname( __FILE__ ) . '/inc/redux/ReduxCore/framework.php' );
+}
+// // The config file
+if ( ! isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/inc/redux-config.php' ) ) {
+	require_once( dirname( __FILE__ ) . '/inc/redux-config.php' );
+}
+// // Some custom functions for getting and displaying the options
+require( get_template_directory() . '/inc/redux-functions.php' );
+
+/**
+ * Add custom shortcodes
+ */
+require( get_template_directory() . '/inc/shortcodes.php' );

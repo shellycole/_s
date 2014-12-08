@@ -5,6 +5,12 @@
  * @package _s
  */
 
+$search_term = substr($_SERVER['REQUEST_URI'],1);
+$search_term = urldecode(stripslashes($search_term));
+$find = array ("'.html'", "'.+/'", "'[-/_]'") ;
+$replace = " " ;
+$search_term = trim(preg_replace ( $find , $replace , $search_term ));
+$search_term_q = preg_replace('/ /', '%20', $search_term);
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -17,8 +23,9 @@ get_header(); ?>
 
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_s' ); ?></p>
-
-					<?php get_search_form(); ?>
+                                        
+                                        <h3>Possible Matches</h3>
+					<?php search404($search_term_q); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 

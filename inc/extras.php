@@ -102,3 +102,29 @@ function _s_setup_author() {
 	}
 }
 add_action( 'wp', '_s_setup_author' );
+
+
+/**
+ * When the end user hits the 404 page, it turns the page in the browser's URL
+ * into a search query, to provide a better 404 page.
+ */
+function _s_search404($search_term_q) {
+	/* run the url as a query */
+	query_posts('s='. $search_term_q );
+	if ( have_posts() ) :
+	/* check to see if there are posts, before telling people something that isn't true */ ?>
+	<div id="results">
+	<?php $n = 1;
+	    while ( have_posts() ) : the_post(); ?>
+	    <div class="post">
+		  <h5 class="entry-title"><?php echo $n; ?>. <a href="<?php the_permalink() ?>" title="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h5>
+		  <p class="date"><?php the_time('F j, Y') ?></p>
+		  <div class="entry">
+			<?php the_excerpt(); ?>
+		  </div>
+		</div>
+	<?php $n++; endwhile; ?>
+	</div>
+	<?php /* close the list before closing the if/else */
+	else : endif;
+}

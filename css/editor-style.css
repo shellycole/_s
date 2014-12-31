@@ -1,0 +1,99 @@
+/* =Colors
+----------------------------------------------- */
+/* =Fonts
+----------------------------------------------- */
+/* =Alignment & Positioning
+----------------------------------------------- */
+/* =Media
+----------------------------------------------- */
+/* =Forms
+----------------------------------------------- */
+/* =High Definition
+----------------------------------------------- */
+/* =Typography
+----------------------------------------------- */
+/* =Special effects
+----------------------------------------------- */
+html {
+  font-size: 62.5%; }
+
+body#tinymce.wp-editor {
+  font-size: 14px;
+  font-size: 1.4rem;
+  max-width: 682px;
+  color: #010101;
+  font-family: "Arial", sans-serif;
+  line-height: 2;
+  /* =Colors
+  ----------------------------------------------- */
+  /* =Fonts
+  ----------------------------------------------- */
+  /* =Alignment & Positioning
+  ----------------------------------------------- */
+  /* =Media
+  ----------------------------------------------- */
+  /* =Forms
+  ----------------------------------------------- */
+  /* =High Definition
+  ----------------------------------------------- */
+  /* =Typography
+  ----------------------------------------------- */
+  /* =Special effects
+  ----------------------------------------------- */
+  /* =Typography
+  ----------------------------------------------- */
+  /* =Link colors
+  ----------------------------------------------- */
+  /* =Lists
+  ----------------------------------------------- */
+  /* =Forms
+  ----------------------------------------------- */ }
+  body#tinymce.wp-editor a {
+    color: #2b3b87;
+    text-decoration: none;
+    cursor: pointer; }
+    body#tinymce.wp-editor a:hover {
+      color: #a9bb65; }
+  body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor h6 {
+    font-family: "ff-ernestine-web-pro", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+    font-size: 16px;
+    font-size: 1.6rem; }
+  body#tinymce.wp-editor h3 {
+    color: #c23a90; }
+    body#tinymce.wp-editor h3 a {
+      color: #c23a90; }
+      body#tinymce.wp-editor h3 a:hover {
+        color: #de59ad; }
+  body#tinymce.wp-editor h4 {
+    color: #d5934b; }
+    body#tinymce.wp-editor h4 a {
+      color: #d5934b; }
+      body#tinymce.wp-editor h4 a:hover {
+        color: #e8871e; }
+  body#tinymce.wp-editor h5 {
+    color: #becf7d; }
+    body#tinymce.wp-editor h5 a {
+      color: #becf7d; }
+      body#tinymce.wp-editor h5 a:hover {
+        color: #859e24; }
+  body#tinymce.wp-editor h6 {
+    color: #ffffff; }
+  body#tinymce.wp-editor blockquote {
+    padding: 0.5em 2.5em;
+    margin: 1.5em 5em;
+    border-top: 3px solid #2b3b87;
+    border-bottom: 3px solid #2b3b87; }
+    body#tinymce.wp-editor blockquote cite {
+      display: block;
+      text-align: right; }
+    body#tinymce.wp-editor blockquote:before {
+      content: '.';
+      background: url(../images/quotes.png) no-repeat center center;
+      height: 50px;
+      margin-top: -2.5em;
+      display: block;
+      font-size: 0/0;
+      color: transparent; }

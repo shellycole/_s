@@ -1,0 +1,25 @@
+.wrap {
+  width: 85%;
+  margin: 0 auto; }
+
+.entry-content {
+  overflow-x: hidden; }
+  .entry-content .gallery-caption {
+    display: none; }
+
+.page-template-full-width-php #secondary,
+.archive #secondary,
+.category #secondary,
+.no-post-thumbnail #secondary {
+  display: none; }
+.page-template-full-width-php .content-area,
+.archive .content-area,
+.category .content-area,
+.no-post-thumbnail .content-area {
+  margin-left: 0;
+  float: none; }
+.page-template-full-width-php .site-main,
+.archive .site-main,
+.category .site-main,
+.no-post-thumbnail .site-main {
+  margin: 0; }

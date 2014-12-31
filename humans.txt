@@ -1,24 +1,24 @@
 /* TEAM */
-	Designer:        
-	URI:             http://.com
-	Email:           
-	Twitter:         @
+	Designer:   
+	URI:        
+	Email:      
+	Twitter:    
 
-	Developer:       WP Moxie
-	URI:             http://wpmoxie.com
-	Email:           sarah@wpmoxie.com
-	Twitter:         @WPMoxie
+	Developer:  Shelly Cole
+	URI:        http://shellycodes.com
+	Email:      hello@shellycodes.com
+	Twitter:    @shellycodes
 
 /* THANKS */
-	Base Theme:      Automattic
-	URI:             http://automattic.com
-	Twitter:         @automattic
+	Base Theme: _s by Automattic
+	URI:        http://underscores.me/
+	Twitter:    @automattic
 
-	Menu Icon:       Timothy Miller
-	URI:             http://tmthymllr.com
-	Dribbble:        https://dribbble.com/shots/1136995-Wirecons-Vector-Icons
-	Twitter:         @tmthymllr
+        Also thanks for Sarah Lewis (WPMoxie, bookchiq) for some of the 
+        additional changes/edits to _s, which I also lifted so I didn't have to 
+        rewrite everything.
 
-	Social Icons:    Linh Pham
-	URI:             http://linhpham.me/
-	Creative Market: https://creativemarket.com/phdieuli/
+/* THEME */
+        Standards: HTML5, CSS3
+        Components: WordPress, Redux Framework, CMB2
+        Software: NetBeans, Tower

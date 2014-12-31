@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixins";
+
+html {
+	font-size: 62.5%; // Sets up the Base 10 stuff
+}
+
+body#tinymce.wp-editor {
+	// @include century-gothic;
+	@include font-size( 14 );
+	max-width: 682px; // Set this to the content width, so the line wraps fall at the same place
+        color: $color__text;
+        font-family: $font__main;
+        line-height:$font__line-height-body;
+	@import "content";
+
+
+        a {
+            color: $color__link;
+            text-decoration:none;
+            cursor:pointer;
+
+            &:hover {
+                color:$color__link-hover;
+            }
+        }
+
+        h3, h4, h5, h6 {
+            font-family: $font__alt;
+            text-transform:uppercase;
+            font-weight:normal;
+            margin-bottom:0.5em;
+            @include font-size( 16 );
+        }
+
+        h3 {
+            color: $color__pink;
+
+            a {
+                color: $color__pink;
+
+                &:hover {
+                    color: $color__pink-alt;
+                }
+            }
+        }
+
+        h4 {
+            color: $color__orange;
+
+            a {
+                color: $color__orange;
+
+                &:hover {
+                    color: $color__orange-alt;
+                }
+            }
+        }
+
+        h5 {
+            color: $color__green;
+
+            a {
+                color: $color__green;
+
+                &:hover {
+                    color: $color__green-alt;
+                }
+            }
+        }
+
+        h6 {
+            color: $color__white;
+        }
+
+        blockquote {
+            padding:0.5em 2.5em;
+            margin: 1.5em 5em;
+            border-top:3px solid $color__link;
+            border-bottom:3px solid $color__link;
+
+            cite {
+                display:block;
+                text-align:right;
+            }
+
+            &:before {
+                content:'.'; 
+                background: url(../images/quotes.png) no-repeat center center;
+                height:50px;
+                margin-top:-2.5em;
+                display:block;
+                font-size:0/0;
+                color:transparent;
+            }
+        }
+}

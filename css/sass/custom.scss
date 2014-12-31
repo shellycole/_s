@@ -1,0 +1,30 @@
+.wrap {
+    width:85%;
+    margin:0 auto;
+}
+
+.entry-content {
+    overflow-x: hidden;
+    
+    .gallery-caption {
+        display:none;
+    }
+}
+
+.page-template-full-width-php,
+.archive,
+.category,
+.no-post-thumbnail {
+    #secondary {
+        display:none;
+    }
+    
+    .content-area {
+        margin-left:0;
+        float:none;
+    }
+    
+    .site-main {
+        margin:0;
+    }
+}

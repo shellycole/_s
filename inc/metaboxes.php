@@ -5,7 +5,7 @@
 add_action( 'init', '_s_initialize_cmb_meta_boxes', 9999 );
 function _s_initialize_cmb_meta_boxes() {
 	if ( ! class_exists( 'cmb_Meta_Box' ) ) {
-		require_once( get_template_directory() . '/inc/cmb/init.php' );
+		require_once( get_template_directory() . '/inc/cmb2/init.php' );
 	}
 }
 
